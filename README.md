@@ -1,6 +1,7 @@
 # Python爬虫项目实战
 
 **欢迎来到Corley的Python爬虫实战项目！**
+
 随着互联网的快速发展，海量数据充斥在网络中，如何有效地获取并处理这些数据成为一个重要的问题。Python作为一种功能强大的编程语言，其庞大的第三方库能够轻松地帮助我们实现网络数据的抓取和分析。本项目旨在通过Python爬虫技术，实现对多种网站和应用的数据抓取和整理。内容方面，从Python基础和进阶开始，包含常用工具使用、JavaScript基础、抓包工具、爬虫基础、反爬虫基础、反爬虫进阶、验证码反爬和分布式爬虫等，内容由浅入深，不仅包含了理论基础，同时也包含很多爬虫实战案例，面向副业、转行、就业和技术提升，适合新手入门和进阶爬虫技术。通过本项目，不仅可以实现更便捷地获取数据，而且可以实现提升工作效率、自动化、解放双手，从而提升工作质量和生活幸福感。
 
 ## 环境
@@ -17,14 +18,12 @@ conda create -n pythoncrawlbase python=3.9 -y
 
 ```shell
 conda activate pythoncrawlbase
-conda install jupyter -y
+conda install jupyter jieba blessed -y
 ```
 
 ## 目录
 <details>
-<summary>
-[Python基础](01_python_basic)
-</summary>
+<summary>Python基础</summary>
 
 - [简化聊天机器人](01_python_basic/simple_chatbot.py)
 - [生成指定长度随机字符串](01_python_basic/random_str.py)
@@ -37,6 +36,19 @@ conda install jupyter -y
 - [Python中的while和for循环](01_python_basic/while_for.py)
 - [Python中的异常处理](01_python_basic/exception.py)
 - [Python函数](01_python_basic/function.ipynb)
+- [全局与局部作用域](01_python_basic/global_local_field.ipynb)
+- [闭包](01_python_basic/closure.ipynb)
+- [装饰器](01_python_basic/decorator.ipynb)
+- [类与对象](01_python_basic/class_object.ipynb)
+- [继承与多态](01_python_basic/inheritance_polymorphism.ipynb)
+
+</details>
+
+<details>
+<summary>Python基础实战</summary>
+
+- [简易词频统计器](applications/word_counter.py)
+- [贪吃蛇小游戏](applications/snake_game)
 
 </details>
 
