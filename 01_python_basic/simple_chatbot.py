@@ -6,7 +6,7 @@
 @Github   :   https://github.com/corleytd
 @Time     :   2023-11-06 7:17
 @Project  :   Hands-on Crawler with Python-simple_chatbot
-简化聊天机器人：
+while循环简化聊天机器人：
 提问：今天天气好吗？
 回答：今天天气好！
 提问：吃了吗？

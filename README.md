@@ -10,22 +10,22 @@
 
 1.创建虚拟环境
 
-```shell
+```bash
 conda create -n pythoncrawlbase python=3.9 -y
 ```
 
 2.进入虚拟环境并安装所依赖的库
 
-```shell
+```bash
 conda activate pythoncrawlbase
-conda install jupyter jieba blessed -y
+conda install jupyter jieba blessed pymysql pymongo -y
 ```
 
 ## 目录
 <details>
 <summary>Python基础</summary>
 
-- [简化聊天机器人](01_python_basic/simple_chatbot.py)
+- [while循环简单聊天机器人](01_python_basic/simple_chatbot.py)
 - [生成指定长度随机字符串](01_python_basic/random_str.py)
 - [列表的常用方法](01_python_basic/list_methods.py)
 - [元组与列表的区别](01_python_basic/tuple_list.py)
@@ -41,17 +41,40 @@ conda install jupyter jieba blessed -y
 - [装饰器](01_python_basic/decorator.ipynb)
 - [类与对象](01_python_basic/class_object.ipynb)
 - [继承与多态](01_python_basic/inheritance_polymorphism.ipynb)
+- 实战：[简易词频统计器](applications/word_counter.py)
+- 实战：[贪吃蛇小游戏](applications/snake_game)
 
 </details>
 
 <details>
-<summary>Python基础实战</summary>
+<summary>Python进阶</summary>
 
-- [简易词频统计器](applications/word_counter.py)
-- [贪吃蛇小游戏](applications/snake_game)
+- [静态方法与类方法](02_python_advanced/static_class_method.ipynb)
+- [迭代器与生成器](02_python_advanced/iterator_generator.ipynb)
+- [上下文管理器](02_python_advanced/with_context_manager.ipynb)
+- [垃圾回收机制](02_python_advanced/garbage_collection.ipynb)
+- [线程](02_python_advanced/thread.ipynb)
+- [进程](02_python_advanced/process.ipynb)
+- [协程](02_python_advanced/coroutine.ipynb)
 
 </details>
 
+<details>
+<summary>数据库</summary>
+
+- [MySQL基本操作](03_database/mysql.md)
+- [Python操作MySQL](03_database/mysql_with_python.ipynb)
+- [MongoDB操作](03_database/mongodb.md)
+- [Python操作MongoDB](03_database/mongo_with_python.ipynb)
+
+</details>
+
+<details>
+<summary>工具库</summary>
+
+- [MySQL连接池](utils/mysql_pool)
+
+</details>
 
 ## 持续更新中……
 
