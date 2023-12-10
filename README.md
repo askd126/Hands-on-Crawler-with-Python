@@ -18,7 +18,7 @@ conda create -n pythoncrawlbase python=3.9 -y
 
 ```bash
 conda activate pythoncrawlbase
-conda install jupyter jieba blessed pymysql pymongo -y
+conda install jupyter jieba blessed pymysql pymongo redis lxml aiohttp -y
 ```
 
 ## 目录
@@ -66,6 +66,29 @@ conda install jupyter jieba blessed pymysql pymongo -y
 - [Python操作MySQL](03_database/mysql_with_python.ipynb)
 - [MongoDB操作](03_database/mongodb.md)
 - [Python操作MongoDB](03_database/mongo_with_python.ipynb)
+- [Redis操作](03_database/redis.md)
+- [Python操作Redis](03_database/redis_with_python.ipynb)
+
+</details>
+
+<details>
+<summary>基础爬虫——爬取豆瓣电影</summary>
+
+- [爬取豆瓣Top电影——串行版](04_base_crawler/douban_top_movie_crawler_serial.py)
+- [爬取豆瓣Top电影——线程进程版](04_base_crawler/douban_top_movie_crawler_thread_process.py)
+- [爬取豆瓣Top电影——协程版](04_base_crawler/douban_top_movie_crawler_coroutine.py)
+- [爬取豆瓣Top电影——aiohttp版](04_base_crawler/douban_top_movie_crawler_aiohttp.py)
+- [递归爬取豆瓣电影Top 250——基于Python之父Guido van Rossum的实现](04_base_crawler/douban_top_movie_crawler_recursive_from_guido.py)
+
+</details>
+
+<details>
+<summary>JavaScript基础</summary>
+
+- [JavaScript入门](05_javascript/javascript_basic.md)
+- [JavaScript对象](05_javascript/javascript_object.md)
+- [JavaScript原型链](05_javascript/javascript_prototype_chain.md)
+- [JavaScript函数进阶](05_javascript/javascript_function_advanced.md)
 
 </details>
 
@@ -73,6 +96,7 @@ conda install jupyter jieba blessed pymysql pymongo -y
 <summary>工具库</summary>
 
 - [MySQL连接池](utils/mysql_pool)
+- [装饰器](utils/decorators)
 
 </details>
 

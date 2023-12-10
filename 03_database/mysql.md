@@ -1,4 +1,8 @@
 # MySQL基本操作
+基于Docker安装和运行MySQL步骤：
+```bash
+docker run --name mysql -p 3306:3306 -v E:\Docker\data\mysql\conf:/etc/mysql/conf.d -v E:\Docker\data\mysql\logs:/var/log/mysql -v E:\Docker\data\mysql\data:/var/lib/mysql -e MYSQL_ROOT_PASSWORD=123456 -d mysql
+```
 ## 1.数据库操作
 创建数据库：
 ```sql
