@@ -1,0 +1,136 @@
+/**
+ * @description: 域名锁定
+ */
+
+const ObjectHandler = require('../11_js_hook/HookAnyObject');
+
+
+// 3.给global对象手动创建出document和location属性
+global.document = {
+    location: {}
+}
+
+// 4.将global对象代理
+global = new Proxy(global, ObjectHandler('global'));
+console.log(global.document.location);
+
+var _0x52727a = _0x5252;
+
+(function (_0x49ceed, _0x14a911) {
+    var _0x29e794 = _0x5252, _0x27f1f6 = _0x49ceed();
+    while (!![]) {
+        try {
+            var _0x1a8eb5 = parseInt(_0x29e794(0xdc)) / 0x1 * (parseInt(_0x29e794(0xe7)) / 0x2) + parseInt(_0x29e794(0xdd)) / 0x3 * (parseInt(_0x29e794(0xd3)) / 0x4) + -parseInt(_0x29e794(0xd9)) / 0x5 * (parseInt(_0x29e794(0xe6)) / 0x6) + -parseInt(_0x29e794(0xdb)) / 0x7 * (-parseInt(_0x29e794(0xe1)) / 0x8) + -parseInt(_0x29e794(0xcf)) / 0x9 + -parseInt(_0x29e794(0xd8)) / 0xa * (-parseInt(_0x29e794(0xde)) / 0xb) + parseInt(_0x29e794(0xda)) / 0xc * (-parseInt(_0x29e794(0xdf)) / 0xd);
+            if (_0x1a8eb5 === _0x14a911) break; else _0x27f1f6['push'](_0x27f1f6['shift']());
+        } catch (_0x1d382f) {
+            _0x27f1f6['push'](_0x27f1f6['shift']());
+        }
+    }
+}(_0x2493, 0x3cb98));
+var _0x2ed7a2 = (function () {
+    var _0x1afe72 = !![];
+    return function (_0x3f2c74, _0x396e32) {
+        var _0xabd40c = _0x1afe72 ? function () {
+            var _0x10fa2f = _0x5252;
+            if (_0x396e32) {
+                var _0x2cd951 = _0x396e32[_0x10fa2f(0xe9)](_0x3f2c74, arguments);
+                return _0x396e32 = null, _0x2cd951;
+            }
+        } : function () {
+        };
+        return _0x1afe72 = ![], _0xabd40c;
+    };
+}()), _0x1c3647 = _0x2ed7a2(this, function () {
+    var _0x1922af = _0x5252, _0x2187f8;
+    try {
+        // 5.动态函数获取当前环境中的全局对象：浏览器控制台执行获得的是window对象；NodeJS中执行获得的是global对象，绕过了代理
+        var _0x26a490 = Function(_0x1922af(0xd2) + _0x1922af(0xe8) + ');'); // 等价于return (function() {}.constructor("return this")( ));
+        _0x2187f8 = _0x26a490();
+    } catch (_0x258d09) {
+        _0x2187f8 = window;
+    }
+    var _0x27bb28 = new RegExp(_0x1922af(0xe5), 'g'),
+        _0x5d03c1 = _0x1922af(0xd4)[_0x1922af(0xe2)](_0x27bb28, '')[_0x1922af(0xd1)](';'), _0x3be2d4, _0xd2e3c, // 等价于'F.baiKdfkzIqwgxNqusy.cAwoLvMSmpksLQQl'['replace'](new RegExp('[FKfkzIqwgxNqsyAwLvMSpksLQQl]', 'g'), '')['split'](';')，等价于[".baidu.com"]
+        _0x3f8fd7, _0x51f695, _0x1813c7 = function (_0x4a77b4, _0x52e3f4, _0x1f25b1) {
+            var _0x1f6581 = _0x1922af;
+            if (_0x4a77b4[_0x1f6581(0xd7)] != _0x52e3f4) return ![];
+            for (var _0x255126 = 0x0; _0x255126 < _0x52e3f4; _0x255126++) {
+                for (var _0xefae33 = 0x0; _0xefae33 < _0x1f25b1[_0x1f6581(0xd7)]; _0xefae33 += 0x2) {
+                    if (_0x255126 == _0x1f25b1[_0xefae33] && _0x4a77b4[_0x1f6581(0xe0)](_0x255126) != _0x1f25b1[_0xefae33 + 0x1]) return ![];
+                }
+            }
+            return !![];
+        }, _0xb16c32 = function (_0x12ff49, _0x1a35b7, _0x5e278e) {
+            return _0x1813c7(_0x1a35b7, _0x5e278e, _0x12ff49);
+        }, _0x33f377 = function (_0x5dd7a9, _0x335cfa, _0x224aba) {
+            return _0xb16c32(_0x335cfa, _0x5dd7a9, _0x224aba);
+        }, _0xa07df8 = function (_0x2d1600, _0x30f48b, _0x4392c1) {
+            return _0x33f377(_0x30f48b, _0x4392c1, _0x2d1600);
+        };
+    for (var _0x4afb9c in _0x2187f8) {
+        if (_0x1813c7(_0x4afb9c, 0x8, [0x7, 0x74, 0x5, 0x65, 0x3, 0x75, 0x0, 0x64])) {
+            _0x3be2d4 = _0x4afb9c;
+            break;
+        }
+    }
+    for (var _0x3721bf in _0x2187f8[_0x3be2d4]) {
+        if (_0xa07df8(0x6, _0x3721bf, [0x5, 0x6e, 0x0, 0x64])) {
+            _0xd2e3c = _0x3721bf;
+            break;
+        }
+    }
+    for (var _0x2de110 in _0x2187f8[_0x3be2d4]) {
+        if (_0x33f377(_0x2de110, [0x7, 0x6e, 0x0, 0x6c], 0x8)) {
+            _0x3f8fd7 = _0x2de110;
+            break;
+        }
+    }
+    // 1.打印出_0x3be2d4和_0x3f8fd7
+    console.log('_0x3be2d4:', _0x3be2d4, '_0x3f8fd7:', _0x3f8fd7);
+    if (!('~' > _0xd2e3c)) { // 2.调整if和for循环结构
+        for (var _0x16d917 in _0x2187f8[_0x3be2d4][_0x3f8fd7]) {
+            if (_0xb16c32([0x7, 0x65, 0x0, 0x68], _0x16d917, 0x8)) {
+                _0x51f695 = _0x16d917;
+                break;
+            }
+        }
+    }
+    if (!_0x3be2d4 || !_0x2187f8[_0x3be2d4]) return;
+    var _0x4e3801 = _0x2187f8[_0x3be2d4][_0xd2e3c],
+        _0x7a1a76 = !!_0x2187f8[_0x3be2d4][_0x3f8fd7] && _0x2187f8[_0x3be2d4][_0x3f8fd7][_0x51f695],
+        _0x24fb38 = _0x4e3801 || _0x7a1a76;
+    if (!_0x24fb38) return;
+    var _0x403c88 = ![];
+    // 6.校验域名列表
+    for (var _0x7382a7 = 0x0; _0x7382a7 < _0x5d03c1[_0x1922af(0xd7)]; _0x7382a7++) {
+        var _0xd2e3c = _0x5d03c1[_0x7382a7],
+            _0x2fa92c = _0xd2e3c[0x0] === String[_0x1922af(0xd6)](0x2e) ? _0xd2e3c['slice'](0x1) : _0xd2e3c,
+            _0x84154d = _0x24fb38[_0x1922af(0xd7)] - _0x2fa92c[_0x1922af(0xd7)],
+            _0x12902c = _0x24fb38['indexOf'](_0x2fa92c, _0x84154d),
+            _0xf135d3 = _0x12902c !== -0x1 && _0x12902c === _0x84154d;
+        _0xf135d3 && ((_0x24fb38['length'] == _0xd2e3c[_0x1922af(0xd7)] || _0xd2e3c['indexOf']('.') === 0x0) && (_0x403c88 = !![]));
+    }
+    // 7.如果不满足，就会跳转到空白页
+    if (!_0x403c88) {
+        var _0x9689eb = new RegExp(_0x1922af(0xe3), 'g'), _0xe1cfac = _0x1922af(0xd0)['replace'](_0x9689eb, '');
+        _0x2187f8[_0x3be2d4][_0x3f8fd7] = _0xe1cfac; // 8.window.document.location = 'about:blank'
+    }
+});
+_0x1c3647(), console[_0x52727a(0xe4)](_0x52727a(0xd5));
+
+function _0x5252(_0x13546a, _0x4d3123) {
+    var _0x928ec5 = _0x2493();
+    return _0x5252 = function (_0x1c3647, _0x2ed7a2) {
+        _0x1c3647 = _0x1c3647 - 0xcf;
+        var _0x3a090d = _0x928ec5[_0x1c3647];
+        return _0x3a090d;
+    }, _0x5252(_0x13546a, _0x4d3123);
+}
+
+function _0x2493() {
+    var _0x50041c = ['1353PCVqxB', '836498xdWaWf', 'charCodeAt', '3784jouudt', 'replace', '[BVvNceFEAEvKrfHQvsACfffUwyPi]', 'log', '[FKfkzIqwgxNqsyAwLvMSpksLQQl]', '299946uYOOfO', '3092yTDIWj', '{}.constructor(\x22return\x20this\x22)(\x20)', 'apply', '2649888GRCsNx', 'BaboVutvNc:ebFlaEnAkEvKrfHQvsACfffUwyPi', 'split', 'return\x20(function()\x20', '28dLntFD', 'F.baiKdfkzIqwgxNqusy.cAwoLvMSmpksLQQl', 'I\x20love\x20JavaScript!', 'fromCharCode', 'length', '17130TLOIoP', '35PZzLni', '72SDazyx', '4711XGhsCm', '206wkLOYS', '185001BPVOJs'];
+    _0x2493 = function () {
+        return _0x50041c;
+    };
+    return _0x2493();
+}

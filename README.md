@@ -18,12 +18,14 @@ conda create -n pythoncrawlbase python=3.9 -y
 
 ```bash
 conda activate pythoncrawlbase
-conda install jupyter jieba blessed pymysql pymongo redis lxml aiohttp selenium fonttools -y
+conda install jupyter jieba blessed pymysql pymongo redis lxml aiohttp selenium fonttools scrapy -y
+conda install paddlepaddle-gpu==2.5.2 cudatoolkit=10.2 --channel https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/Paddle/ -y
+pip install paddlehub
 ```
 
 ## 目录
 <details>
-<summary>一、Python基础</summary>
+<summary>1.Python基础</summary>
 
 - [while循环简单聊天机器人](01_python_basic/simple_chatbot.py)
 - [生成指定长度随机字符串](01_python_basic/random_str.py)
@@ -47,7 +49,7 @@ conda install jupyter jieba blessed pymysql pymongo redis lxml aiohttp selenium 
 </details>
 
 <details>
-<summary>二、Python进阶</summary>
+<summary>2.Python进阶</summary>
 
 - [静态方法与类方法](02_python_advanced/static_class_method.ipynb)
 - [迭代器与生成器](02_python_advanced/iterator_generator.ipynb)
@@ -60,7 +62,7 @@ conda install jupyter jieba blessed pymysql pymongo redis lxml aiohttp selenium 
 </details>
 
 <details>
-<summary>三、数据库</summary>
+<summary>3.数据库</summary>
 
 - [MySQL基本操作](03_database/mysql.md)
 - [Python操作MySQL](03_database/mysql_with_python.ipynb)
@@ -71,42 +73,64 @@ conda install jupyter jieba blessed pymysql pymongo redis lxml aiohttp selenium 
 
 </details>
 
-
-
-四、基础爬虫——爬取豆瓣电影：
-- [爬取豆瓣Top电影——串行版](04_base_crawler/douban_top_movie_crawler_serial.py)
-- [爬取豆瓣Top电影——线程进程版](04_base_crawler/douban_top_movie_crawler_thread_process.py)
-- [爬取豆瓣Top电影——协程版](04_base_crawler/douban_top_movie_crawler_coroutine.py)
-- [爬取豆瓣Top电影——aiohttp版](04_base_crawler/douban_top_movie_crawler_aiohttp.py)
-- [递归爬取豆瓣电影Top 250——基于Python之父Guido van Rossum的实现](04_base_crawler/douban_top_movie_crawler_recursive_from_guido.py)
+4.基础爬虫——爬取豆瓣电影：
+- [爬取豆瓣Top电影——串行版](04_base_crawling/douban_top_movie_crawler_serial.py)
+- [爬取豆瓣Top电影——线程进程版](04_base_crawling/douban_top_movie_crawler_thread_process.py)
+- [爬取豆瓣Top电影——协程版](04_base_crawling/douban_top_movie_crawler_coroutine.py)
+- [爬取豆瓣Top电影——aiohttp版](04_base_crawling/douban_top_movie_crawler_aiohttp.py)
+- [递归爬取豆瓣电影Top 250——基于Python之父Guido van Rossum的实现](04_base_crawling/douban_top_movie_crawler_recursive_from_guido.py)
 
 <details>
-<summary>五、JavaScript基础</summary>
+<summary>5.JavaScript基础</summary>
 
-- [JavaScript入门](05_javascript/javascript_basic.md)
-- [JavaScript对象](05_javascript/javascript_object.md)
-- [JavaScript原型链](05_javascript/javascript_prototype_chain.md)
-- [JavaScript函数进阶](05_javascript/javascript_function_advanced.md)
+- [JavaScript入门](05_javascript_basic/javascript_basic.md)
+- [JavaScript对象](05_javascript_basic/javascript_object.md)
+- [JavaScript原型链](05_javascript_basic/javascript_prototype_chain.md)
+- [JavaScript函数进阶](05_javascript_basic/javascript_function_advanced.md)
+- [JavaScript代理与反射](05_javascript_basic/javascript_proxy_reflect.md)
 
 </details>
 
-六、基础反爬
-- [User-Agent反爬](06_basic_anti_crawler/anti_crawler_with_user_agent.py)
-- [Cookies反爬](06_basic_anti_crawler/anti_crawler_with_cookies.py)
-- [关键参数图片化反爬](06_basic_anti_crawler/anti_crawler_with_key_parameter_picturing.py)
-- [恶意链接反爬](06_basic_anti_crawler/anti_crawler_with_malicious_links.py)
+6.基础反爬
+- [User-Agent反爬](06_basic_anti_crawling/anti_crawler_with_user_agent.py)
+- [Cookies反爬](06_basic_anti_crawling/anti_crawler_with_cookies.py)
+- [关键参数图片化反爬](06_basic_anti_crawling/anti_crawler_with_key_parameter_picturing.py)
+- [恶意链接反爬](06_basic_anti_crawling/anti_crawler_with_malicious_links.py)
 
-七、浏览器自动化反爬
-- [使用selenium操作edge访问百度](07_browser_automatic_anti_crawler/edge_baidu_with_selenium.py)
-- [使用selenium操作Edge实现网页动态渲染反爬](07_browser_automatic_anti_crawler/anti_crawler_with_edge_selenium.py)
-- [使用selenium操作Edge实现内嵌iframe网页反爬](07_browser_automatic_anti_crawler/anti_crawler_with_iframe.py)
-- [自动化工具控制浏览器被识别特征](07_browser_automatic_anti_crawler/bot_sannysoft_with_selenium.py)
-- [使用selenium操作Edge实现浏览器特征检测反爬](07_browser_automatic_anti_crawler/anti_crawler_with_browser_feature.py)
+7.浏览器自动化反爬
+- [使用selenium操作edge访问百度](07_browser_automatic_anti_crawling/edge_baidu_with_selenium.py)
+- [使用selenium操作Edge实现网页动态渲染反爬](07_browser_automatic_anti_crawling/anti_crawler_with_edge_selenium.py)
+- [使用selenium操作Edge实现内嵌iframe网页反爬](07_browser_automatic_anti_crawling/anti_crawler_with_iframe.py)
+- [自动化工具控制浏览器被识别特征](07_browser_automatic_anti_crawling/bot_sannysoft_with_selenium.py)
+- [使用selenium操作Edge实现浏览器特征检测反爬](07_browser_automatic_anti_crawling/anti_crawler_with_browser_feature.py)
 
-八、前端技巧反爬
-- [CSS偏移反爬](08_front_end_anti_crawler/anti_crawler_with_css_offset.py)
-- [SVG映射反爬](08_front_end_anti_crawler/anti_crawler_with_svg_mapping.py)
-- [自定义字体反爬](08_front_end_anti_crawler/anti_crawler_with_custom_font.py)
+8.前端技巧反爬
+- [CSS偏移反爬](08_front_end_anti_crawling/anti_crawler_with_css_offset.py)
+- [SVG映射反爬](08_front_end_anti_crawling/anti_crawler_with_svg_mapping.py)
+- [自定义字体反爬](08_front_end_anti_crawling/anti_crawler_with_custom_font.py)
+
+9.调试干扰
+- [限制开发者工具使用](09_debug_interference/restriction_on_devtools_usage.md)
+
+10.JavaScript混淆与逆向
+- [javascript-obfuscator混淆](10_javascript_obfuscation_and_reversal/js_obfuscator.md)
+- [域名锁定](10_javascript_obfuscation_and_reversal/domain_lock_resolution.js)
+
+11.JS Hook
+- [JS Hook逆向](11_js_hook/js_hook_reversal.md)
+  - [所有操作都实现Hook的对象代理](11_js_hook/HookAnyObject.js)
+
+12.环境模拟
+- [Node环境模拟](12_environmental_simulation/node_environmental_simulation.md)
+
+13.验证码反爬
+- [简单图形验证码反爬](13_captcha_anti_crawling/anti_crawler_with_simple_graphic_captcha.py)
+- [简单滑块验证码反爬](13_captcha_anti_crawling/anti_crawler_with_simple_slide_captcha.py)
+- [拼图滑动验证码反爬](13_captcha_anti_crawling/anti_crawler_with_slide_puzzle_captcha.py)
+- [使用selenium捕获鼠标移动](13_captcha_anti_crawling/capture_mouse_move_with_selenium.py)
+- [鼠标轨迹检测反爬](13_captcha_anti_crawling/anti_crawler_with_mouse_track_detection.py)
+
+## 工具库
 
 <details>
 <summary>工具库</summary>
